@@ -5,13 +5,16 @@
     "scripts": {
         "start": "LOCAL_DEV_PORT=3001 node ./bin/www",
         "nodemon": "LOCAL_DEV_PORT=3001 nodemon .bin/www",
+        "install-client": "cd client && npm install",
+        "build-client": "cd client && npm build",
         "stylelint-fix": "stylelint **/*.css --fix",
         "coverage": "jest --coverage",
         "test-client": "cd client && CI=true npm test",
         "test": "jest && npm run test-client",
         "stylelint": "stylelint **/*.css; exit 0",
         "eslint": "eslint .; exit 0",
-        "posttest": "npm run eslint; npm run stylelint"
+        "posttest": "npm run eslint; npm run stylelint",
+        "postinstall": "npm run install-client && npm run build-client"
     },
     "dependencies": {
         "body-parser": "~1.18.2",
