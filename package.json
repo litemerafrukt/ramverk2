@@ -1,0 +1,37 @@
+{
+    "name": "redovisa",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "LOCAL_DEV_PORT=3001 node ./bin/www",
+        "nodemon": "LOCAL_DEV_PORT=3001 nodemon .bin/www",
+        "stylelint-fix": "stylelint **/*.css --fix",
+        "coverage": "jest --coverage",
+        "test-client": "cd client && CI=true npm test",
+        "test": "jest && npm run test-client",
+        "stylelint": "stylelint **/*.css; exit 0",
+        "eslint": "eslint .; exit 0",
+        "posttest": "npm run eslint; npm run stylelint"
+    },
+    "dependencies": {
+        "body-parser": "~1.18.2",
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.9",
+        "express": "~4.15.5",
+        "morgan": "~1.9.0",
+        "pug": "2.0.0-beta11",
+        "ramda": "^0.25.0",
+        "serve-favicon": "~2.4.5"
+    },
+    "devDependencies": {
+        "eslint": "^4.6.1",
+        "eslint-plugin-react": "^7.4.0",
+        "jest": "^21.2.1",
+        "stylelint": "^8.2.0",
+        "supertest": "^3.0.0"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "modulePathIgnorePatterns": ["<rootDir>/client/"]
+    }
+}
