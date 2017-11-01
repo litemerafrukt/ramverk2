@@ -12,7 +12,9 @@ const http = require("http");
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.DBWEBB_PORT || process.env.LOCAL_DEV_PORT || "3000");
+const port = normalizePort(
+    process.env.DBWEBB_PORT || process.env.PORT || process.env.LOCAL_DEV_PORT || "3000"
+);
 
 app.set("port", port);
 

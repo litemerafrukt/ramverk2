@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-/* GET home page. */
+/* GET test-route. */
 router.get("/", function(req, res) {
-    res.render("index", { title: "Express" });
+    res.json({ test: "test route serving json" });
 });
 
 module.exports = router;

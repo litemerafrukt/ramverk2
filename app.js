@@ -1,29 +1,29 @@
 const express = require("express");
 const path = require("path");
-const favicon = require("serve-favicon");
 const logger = require("morgan");
-const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 
-const index = require("./routes/index");
-const test = require("./routes/test-route");
+const test = require("./routes/api/test-route");
+const reports = require("./routes/api/reports");
 
 const app = express();
 
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
-
-app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "client/build")));
+
 // routing
-app.use("/", index);
-app.use("/test", test);
+app.use("/api/test", test);
+app.use("/api/reports", reports);
+
+// Catch all, send react app via index.html if no previous match
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -41,7 +41,9 @@ app.use(function(err, req, res) {
 
     // render the error page
     res.status(err.status || 500);
-    res.render("error");
+    // res.render("error");
+    //res.sendFile(path.join(__dirname + "/client/build/index.html"));
+    res.json({ err: err });
 });
 
 module.exports = app;

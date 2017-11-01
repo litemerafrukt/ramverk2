@@ -2,8 +2,12 @@
     "name": "meClient",
     "version": "1.0.0",
     "dependencies": {
+        "axios": "^0.17.0",
+        "ramda": "^0.25.0",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
+        "react-markdown": "^2.5.0",
+        "react-router-dom": "^4.2.2",
         "react-scripts": "1.0.14"
     },
     "scripts": {
@@ -12,5 +16,5 @@
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject"
     },
-    "proxy": "http://localhost:3001"
+    "proxy": "http://localhost:7000"
 }

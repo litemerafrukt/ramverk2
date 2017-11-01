@@ -3,10 +3,10 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "LOCAL_DEV_PORT=3001 node ./bin/www",
-        "nodemon": "LOCAL_DEV_PORT=3001 nodemon .bin/www",
+        "start": "node ./bin/www",
+        "start-dev": "LOCAL_DEV_PORT=7000 nodemon ./bin/www",
         "install-client": "cd client && npm install",
-        "build-client": "cd client && npm build",
+        "build-client": "cd client && npm run build",
         "stylelint-fix": "stylelint **/*.css --fix",
         "coverage": "jest --coverage",
         "test-client": "cd client && CI=true npm test",
@@ -18,13 +18,11 @@
     },
     "dependencies": {
         "body-parser": "~1.18.2",
-        "cookie-parser": "~1.4.3",
         "debug": "~2.6.9",
         "express": "~4.15.5",
+        "fluture": "^7.2.1",
         "morgan": "~1.9.0",
-        "pug": "2.0.0-beta11",
-        "ramda": "^0.25.0",
-        "serve-favicon": "~2.4.5"
+        "ramda": "^0.25.0"
     },
     "devDependencies": {
         "eslint": "^4.6.1",

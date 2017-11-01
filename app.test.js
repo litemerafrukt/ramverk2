@@ -13,14 +13,14 @@ test("It should response to GET method on home with status 200", () => {
         .expect(200);
 });
 
-test("/test should respond with status 200", () => {
+test("/api/test should respond with status 200", () => {
     return request(app)
-        .get("/test")
+        .get("/api/test")
         .expect(200);
 });
 
-test("/test should respond with body containing 'test' key", () => {
+test("/api/test should respond with body containing 'test' key", () => {
     return request(app)
-        .get("/test")
+        .get("/api/test")
         .then(res => expect(res.body).toHaveProperty("test"));
 });
