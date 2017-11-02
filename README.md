@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/litemerafrukt/ramverk2.svg?branch=master)](https://travis-ci.org/litemerafrukt/ramverk2)
 
 ## Installera
+
 1. Klona repot
 2. cd in
 3. `npm install`
