@@ -15,7 +15,7 @@
 6. `npm start`
 7. Servern lyssnar på port angiven i `DBWEBB_PORT`, `PORT`, `LOCAL_DEV_PORT` eller `3000` i den ordningen.
 
-## Köra tester
-`npm test` kör tester och linters för server och client.
+## Kör tester
+Efter `npm install` kör `npm test` för att köra tester och linters för server och client.
 
 Licens MIT
