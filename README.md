@@ -1,5 +1,9 @@
 # Me-sida för ramverk2
 [![Build Status](https://travis-ci.org/litemerafrukt/ramverk2.svg?branch=master)](https://travis-ci.org/litemerafrukt/ramverk2)
+[![Maintainability](https://api.codeclimate.com/v1/badges/01d16a17f25957ec7f4e/maintainability)](https://codeclimate.com/github/litemerafrukt/ramverk2/maintainability)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/badges/build.png?b=master)](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/build-status/master)
 
 ## Installera
 
