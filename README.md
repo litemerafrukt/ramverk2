@@ -5,6 +5,8 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/badges/build.png?b=master)](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/build-status/master)
 
+[Demo](https://whispering-falls-30453.herokuapp.com/)
+
 ## Installera
 
 1. Klona repot
