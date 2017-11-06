@@ -5,8 +5,9 @@
     "scripts": {
         "start": "node ./bin/www",
         "start-client": "cd client && npm start",
-        "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./bin/www && npm start-client",
-        "start-dev": "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
+        "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./bin/www",
+        "start-dev":
+            "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
         "install-client": "cd client && npm install",
         "build-client": "cd client && npm run build",
         "stylelint-fix": "stylelint **/*.css --fix",
@@ -17,7 +18,8 @@
         "eslint": "eslint .; exit 0",
         "posttest": "npm run eslint; npm run stylelint",
         "postinstall": "npm run install-client && npm run build-client",
-        "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+        "heroku-postbuild":
+            "cd client && npm install --only=dev && npm install && npm run build"
     },
     "dependencies": {
         "body-parser": "~1.18.2",
@@ -37,8 +39,6 @@
     },
     "jest": {
         "testEnvironment": "node",
-        "modulePathIgnorePatterns": [
-            "<rootDir>/client/"
-        ]
+        "modulePathIgnorePatterns": ["<rootDir>/client/"]
     }
 }
