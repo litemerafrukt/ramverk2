@@ -21,7 +21,7 @@ Utifrån denna upptäckt, att oophp strukturen kanske inte är så illa, tänkte
 
 Generellt tänker jag bygga katalogstrukturen med inspiration från de anaxkurser vi läst.
 
-React klinten ligger som en subkatalog, `client`, under serverkatalogen för att samla allt i samma träd. Möjligen skulle jag gjort annorlunda och istället lagt denna på samma nivå som serverkatalogen. Det känns eventuellt som en snyggare variant. Tål att grunna på till det är tid för projektet.
+React klienten ligger som en subkatalog, `client`, under serverkatalogen för att samla allt i samma träd. Möjligen skulle jag gjort annorlunda och istället lagt denna på samma nivå som serverkatalogen. Det känns eventuellt som en snyggare variant. Tål att grunna på till det är tid för projektet.
 
 För tester tänker jag följa konventionen att lägga testfilen i tillsammans med den fil som sak testas snarare än en separat testkatalog med en katalogstruktur som speglar strukturen hos katalogerna som innehåller det som ska testas.
 
