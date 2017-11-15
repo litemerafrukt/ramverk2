@@ -1,6 +1,6 @@
 import React from "react";
-import { PageLayout } from "PageLayout";
-import selfie from "img/selfie.jpg";
+import { PageLayout } from "./../PageLayout";
+import selfie from "./../img/selfie.jpg";
 
 export const Home = () => (
     <PageLayout>

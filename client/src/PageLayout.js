@@ -1,6 +1,6 @@
 import React from "react";
-import { SidebarMenu } from "SidebarMenu";
-import "css/style.css";
+import { SidebarMenu } from "./SidebarMenu";
+import "./css/style.css";
 
 export const PageLayout = ({ children }) => (
     <div className="app">

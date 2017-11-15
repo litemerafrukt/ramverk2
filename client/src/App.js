@@ -1,10 +1,10 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Home } from "pages/Home";
-import { Reports } from "pages/Reports";
-import { About } from "pages/About";
-import { NotFound404 } from "pages/NotFound404";
+import { Home } from "./pages/Home";
+import { Reports } from "./pages/Reports";
+import { About } from "./pages/About";
+import { NotFound404 } from "./pages/NotFound404";
 
 // window.React = React;
 

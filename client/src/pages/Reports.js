@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { PageLayout } from "PageLayout";
-import { ReportsMenu } from "pages/ReportsMenu";
-import Report from "pages/Report";
+import { PageLayout } from "./../PageLayout";
+import { ReportsMenu } from "./ReportsMenu";
+import Report from "./Report";
 
 export const Reports = () => (
     <PageLayout>

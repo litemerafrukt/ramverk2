@@ -1,16 +1,19 @@
 {
     "name": "redovisa",
     "version": "2.0.1",
-    "private": true,
+    "private": false,
     "scripts": {
         "start": "node ./bin/www",
         "start-client": "cd client && npm start",
         "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./bin/www",
-        "start-dev": "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
+        "dev":
+            "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
         "install-client": "cd client && npm install",
         "build-client": "cd client && npm run build",
         "stylelint-fix": "stylelint **/*.css --fix",
-        "coverage": "jest --coverage",
+        "coverage-client": "cd client && CI=true npm test -- --coverage",
+        "coverage-split": "jest --coverage && npm run coverage-client",
+        "coverage": "jest --coverage ; exit 0",
         "test-client": "cd client && CI=true npm test",
         "test": "jest && npm run test-client",
         "stylelint": "stylelint **/*.css; exit 0",
@@ -28,17 +31,31 @@
         "ramda": "^0.25.0"
     },
     "devDependencies": {
+        "babel-jest": "^21.2.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
         "concurrently": "^3.5.0",
         "eslint": "^4.6.1",
         "eslint-plugin-react": "^7.4.0",
         "jest": "^21.2.1",
+        "jest-css-modules": "^1.1.0",
+        "react": "^16.1.1",
+        "react-dom": "^16.1.1",
+        "react-test-renderer": "^16.1.1",
         "stylelint": "^8.2.0",
         "supertest": "^3.0.0"
     },
     "jest": {
-        "testEnvironment": "node",
         "modulePathIgnorePatterns": [
-            "<rootDir>/client/"
-        ]
+            "<rootDir>/coverage/",
+            "<rootDir>/client/build",
+            "<rootDir>/client/src/css",
+            "<rootDir>/client/src/img"
+        ],
+        "moduleNameMapper": {
+            "\\.(css|jpg|png)$": "<rootDir>/client/src/__mocks__/empty-module.js"
+        },
+        "collectCoverageFrom": ["**/*.js"],
+        "transform": { ".*": "<rootDir>/node_modules/jest-css-modules" }
     }
 }
