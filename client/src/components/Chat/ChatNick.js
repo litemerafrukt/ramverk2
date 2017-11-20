@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-export class ChatInput extends Component {
+export class ChatNick extends Component {
     constructor(props) {
         super(props);
-        this.state = { input: "" };
+        this.state = { nick: "", error: "" };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleOk = this.handleOk.bind(this);
@@ -11,18 +11,18 @@ export class ChatInput extends Component {
     }
 
     handleChange(event) {
-        const input = event.target.value;
+        const nick = event.target.value;
 
-        this.setState(() => ({ input }));
+        this.setState(() => ({ nick, error: "" }));
     }
 
     handleOk() {
-        const message = this.state.input.trim();
+        const nick = this.state.nick.trim();
 
-        this.setState(() => ({ input: "" }));
-
-        if (message !== "") {
-            this.props.sendMessage(message);
+        if (nick === "") {
+            this.setState(() => ({ nick, error: "Nick måste anges" }));
+        } else {
+            this.props.setNick(nick);
         }
     }
 
@@ -34,16 +34,17 @@ export class ChatInput extends Component {
 
     render() {
         return (
-            <div className="chat-input">
+            <div className="chat-set-nick">
                 <input
-                    value={this.state.input}
+                    value={this.state.nick}
                     type="text"
-                    placeholder=""
+                    placeholder="nick"
                     onChange={this.handleChange}
                     onKeyDown={this.handleEnter}
                 />
 
                 <button onClick={this.handleOk}>Ok</button>
+                {this.state.error !== "" && <p className="chat-error">{this.state.error}</p>}
             </div>
         );
     }

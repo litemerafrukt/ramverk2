@@ -1,36 +1,44 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import axios from "axios";
-import { lensProp, set } from "ramda";
 import { withRouter } from "react-router-dom";
-import Type from "union-type";
+import union from "folktale/adt/union/union";
 
 /**
  * State type
  */
-const ReportState = Type({
-    Nothing: [],
-    Fetching: [],
-    KmomReport: [String],
-    Fail: [String]
+
+const ReportState = union("ReportState", {
+    Nothing() {
+        return {};
+    },
+    Fetching() {
+        return {};
+    },
+    ReportMD(report) {
+        return { report };
+    },
+    Fail(reason) {
+        return { reason };
+    }
 });
 
-const contentLens = lensProp("content");
-
-const { Nothing, Fetching, KmomReport, Fail } = ReportState;
+const { Nothing, Fetching, ReportMD, Fail } = ReportState;
 
 class Report extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { content: Nothing };
+        this.state = { content: Nothing() };
     }
 
     fetchReport({ kmom }) {
-        this.setState(set(contentLens, Fetching));
+        this.setState(() => ({ content: Fetching() }));
         axios(`/api/reports/${kmom}`)
-            .then(({ data }) => this.setState(set(contentLens, KmomReport(data))))
+            .then(({ data }) => this.setState(() => ({ content: ReportMD(data) })))
             .catch(() =>
-                this.setState(set(contentLens, Fail("Fel vid rapporthämtning. Är backend igång?")))
+                this.setState(() => ({
+                    content: Fail("Fel vid rapporthämtning. Är backend igång?")
+                }))
             );
     }
 
@@ -43,15 +51,12 @@ class Report extends React.Component {
     }
 
     render() {
-        return ReportState.case(
-            {
-                Nothing: () => <div />,
-                Fetching: () => <h2>vänta lite bara...</h2>,
-                Fail: message => <pre>{message}</pre>,
-                KmomReport: text => <ReactMarkdown source={text} />
-            },
-            this.state.content
-        );
+        return this.state.content.matchWith({
+            Nothing: () => <div />,
+            Fetching: () => <h2>vänta lite bara...</h2>,
+            Fail: ({ reason }) => <pre>{reason}</pre>,
+            ReportMD: ({ report }) => <ReactMarkdown source={report} />
+        });
     }
 }
 

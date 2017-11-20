@@ -1,0 +1,23 @@
+.chat-nick {
+    font-style: italic;
+    padding-left: 1rem;
+}
+
+.chat-error {
+    color: red;
+}
+
+.chat-message {
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.chat-time-nick {
+    color: #777;
+    padding-bottom: 0.5rem;
+}
