@@ -15,6 +15,7 @@
         "coverage": "jest --coverage ; exit 0",
         "test-client": "cd client && CI=true npm test",
         "test": "jest && npm run test-client",
+        "jest-watch": "jest --watch ; exit 0",
         "stylelint": "stylelint **/*.css; exit 0",
         "eslint": "eslint .; exit 0",
         "posttest": "npm run eslint; npm run stylelint",
@@ -26,8 +27,11 @@
         "debug": "~2.6.9",
         "express": "~4.15.5",
         "fluture": "^7.2.1",
+        "folktale": "^2.0.1",
         "morgan": "~1.9.0",
-        "ramda": "^0.25.0"
+        "most": "^1.7.2",
+        "ramda": "^0.25.0",
+        "socket.io": "^2.0.4"
     },
     "devDependencies": {
         "babel-jest": "^21.2.0",
@@ -37,6 +41,7 @@
         "eslint": "^4.6.1",
         "eslint-plugin-react": "^7.4.0",
         "jest": "^21.2.1",
+        "mock-socket": "^7.1.0",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",
         "react-test-renderer": "^16.1.1",

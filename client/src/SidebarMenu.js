@@ -18,6 +18,9 @@ export const SidebarMenu = () => (
                         <NavLink exact to="/" activeClassName="nav-selected">
                             Hem
                         </NavLink>
+                        <NavLink to="/chat" activeClassName="nav-selected">
+                            Chat
+                        </NavLink>
                         <NavLink to="/reports" activeClassName="nav-selected">
                             Rapporter
                         </NavLink>
