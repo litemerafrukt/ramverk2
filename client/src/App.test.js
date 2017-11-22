@@ -9,6 +9,3 @@ it("renders without crashing", () => {
     ReactDOM.render(<App />, div);
 });
 
-it("conforms to basic math", () => {
-    1 === 1;
-});

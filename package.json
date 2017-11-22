@@ -14,7 +14,7 @@
         "coverage-split": "jest --coverage && npm run coverage-client",
         "coverage": "jest --coverage ; exit 0",
         "test-client": "cd client && CI=true npm test",
-        "test": "jest && npm run test-client",
+        "test": "jest",
         "jest-watch": "jest --watch ; exit 0",
         "stylelint": "stylelint **/*.css; exit 0",
         "eslint": "eslint .; exit 0",
@@ -48,17 +48,24 @@
         "react-dom": "^16.1.1",
         "react-test-renderer": "^16.1.1",
         "stylelint": "^8.2.0",
+        "enzyme": "^3.2.0",
+        "enzyme-adapter-react-16": "^1.1.0",
         "supertest": "^3.0.0"
     },
     "jest": {
+        "setupFiles": [
+            "<rootDir>/.fake-polyfills.js",
+            "<rootDir>/.test-setup.js"
+        ],
         "modulePathIgnorePatterns": [
             "<rootDir>/coverage/",
             "<rootDir>/client/build",
             "<rootDir>/client/src/css",
-            "<rootDir>/client/src/img"
+            "<rootDir>/client/src/img",
+            "<rootDir>/client/node_modules"
         ],
         "moduleNameMapper": {
-            "\\.(css|jpg|png)$": "<rootDir>/client/src/__mocks__/empty-module.js"
+            "\\.(css|jpg|png|svg)$": "<rootDir>/client/src/__mocks__/empty-module.js"
         },
         "collectCoverageFrom": [
             "**/*.js"
