@@ -58,3 +58,12 @@ Min chat är byggd som modul på serversidan och komponenter på klientsidan. De
 gjorde att jag i princip bara behövde kopiera över två kataloger från me-sidan
 till appen och sedan skriva ett par kodrader för att inkorporera modulen och
 topp react-komponenten.
+
+Github-repo:
+[https://github.com/litemerafrukt/ramverk2](https://github.com/litemerafrukt/ramverk2)
+App-repo:
+[https://github.com/litemerafrukt/dojo](https://github.com/litemerafrukt/dojo)
+Me-sidan på Heroku:
+[https://whispering-falls-30453.herokuapp.com/](https://whispering-falls-30453.herokuapp.com/)
+Studentservern:
+[http://www.student.bth.se/~anng15/dbwebb-kurser/ramverk2/me/](http://www.student.bth.se/~anng15/dbwebb-kurser/ramverk2/me/)

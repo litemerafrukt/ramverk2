@@ -123,3 +123,12 @@ kul!
 
 Några tekniker är dock givna att jag ska använda i den framtida appen, react,
 react-router, socket.io och jest.
+
+Github-repo:
+[https://github.com/litemerafrukt/ramverk2](https://github.com/litemerafrukt/ramverk2)
+App-repo:
+[https://github.com/litemerafrukt/dojo](https://github.com/litemerafrukt/dojo)
+Me-sidan på Heroku:
+[https://whispering-falls-30453.herokuapp.com/](https://whispering-falls-30453.herokuapp.com/)
+Studentservern:
+[http://www.student.bth.se/~anng15/dbwebb-kurser/ramverk2/me/](http://www.student.bth.se/~anng15/dbwebb-kurser/ramverk2/me/)
