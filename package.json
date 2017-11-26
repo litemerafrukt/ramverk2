@@ -6,7 +6,8 @@
         "start": "node ./bin/www",
         "start-client": "cd client && npm start",
         "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./bin/www",
-        "dev": "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
+        "dev":
+            "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
         "install-client": "cd client && npm install",
         "build-client": "cd client && npm run build",
         "stylelint-fix": "stylelint **/*.css --fix",
@@ -15,6 +16,9 @@
         "coverage": "jest --coverage ; exit 0",
         "test-client": "cd client && CI=true npm test",
         "test": "jest",
+        "test1": "docker-compose up node8",
+        "test2": "docker-compose up node7",
+        "test3": "docker-compose up node6",
         "jest-watch": "jest --watch ; exit 0",
         "stylelint": "stylelint **/*.css; exit 0",
         "eslint": "eslint .; exit 0",
@@ -40,23 +44,21 @@
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-react": "^6.24.1",
         "concurrently": "^3.5.0",
+        "enzyme": "^3.2.0",
+        "enzyme-adapter-react-16": "^1.1.0",
         "eslint": "^4.6.1",
         "eslint-plugin-react": "^7.4.0",
         "jest": "^21.2.1",
+        "jest-cli": "^21.2.1",
         "mock-socket": "^7.1.0",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",
         "react-test-renderer": "^16.1.1",
         "stylelint": "^8.2.0",
-        "enzyme": "^3.2.0",
-        "enzyme-adapter-react-16": "^1.1.0",
         "supertest": "^3.0.0"
     },
     "jest": {
-        "setupFiles": [
-            "<rootDir>/.fake-polyfills.js",
-            "<rootDir>/.test-setup.js"
-        ],
+        "setupFiles": ["<rootDir>/.fake-polyfills.js", "<rootDir>/.test-setup.js"],
         "modulePathIgnorePatterns": [
             "<rootDir>/coverage/",
             "<rootDir>/client/build",
@@ -67,8 +69,6 @@
         "moduleNameMapper": {
             "\\.(css|jpg|png|svg)$": "<rootDir>/client/src/__mocks__/empty-module.js"
         },
-        "collectCoverageFrom": [
-            "**/*.js"
-        ]
+        "collectCoverageFrom": ["**/*.js"]
     }
 }
