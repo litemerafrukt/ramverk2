@@ -1,13 +1,12 @@
 {
     "name": "redovisa",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "private": false,
     "scripts": {
         "start": "node ./bin/www",
         "start-client": "cd client && npm start",
         "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./bin/www",
-        "dev":
-            "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
+        "dev": "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
         "install-client": "cd client && npm install",
         "build-client": "cd client && npm run build",
         "stylelint-fix": "stylelint **/*.css --fix",
@@ -58,7 +57,10 @@
         "supertest": "^3.0.0"
     },
     "jest": {
-        "setupFiles": ["<rootDir>/.fake-polyfills.js", "<rootDir>/.test-setup.js"],
+        "setupFiles": [
+            "<rootDir>/.fake-polyfills.js",
+            "<rootDir>/.test-setup.js"
+        ],
         "modulePathIgnorePatterns": [
             "<rootDir>/coverage/",
             "<rootDir>/client/build",
@@ -69,6 +71,8 @@
         "moduleNameMapper": {
             "\\.(css|jpg|png|svg)$": "<rootDir>/client/src/__mocks__/empty-module.js"
         },
-        "collectCoverageFrom": ["**/*.js"]
+        "collectCoverageFrom": [
+            "**/*.js"
+        ]
     }
 }
