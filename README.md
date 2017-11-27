@@ -14,10 +14,13 @@
 2. cd in
 3. `npm install`
 4. Passa på att hämta kaffe
-5. Seriöst, det tar tid, gör lite te om kaffe inte är grejen.
-6. `npm start`
-7. Servern lyssnar på port angiven i `DBWEBB_PORT`, `PORT`, `LOCAL_DEV_PORT`
-   eller `3000` i den ordningen.
+5. `npm run install-client`
+6. Här kommer en potentiellt ännu längre kaffe paus
+7. `npm run build-client`
+8. Det tar tid...
+9. `npm start`
+10. Servern lyssnar på port angiven i `DBWEBB_PORT`, `PORT`, `LOCAL_DEV_PORT`
+    eller `3000` i den ordningen.
 
 ## Kör tester
 
