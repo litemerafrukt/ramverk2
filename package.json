@@ -22,7 +22,6 @@
         "stylelint": "stylelint **/*.css; exit 0",
         "eslint": "eslint .; exit 0",
         "posttest": "npm run eslint; npm run stylelint",
-        "postinstall": "npm run install-client && npm run build-client",
         "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
     },
     "dependencies": {
