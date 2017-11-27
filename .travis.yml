@@ -12,6 +12,7 @@ git:
 
 before_script:
     - npm install
+    - npm run install-client
 
 script:
     - npm test
