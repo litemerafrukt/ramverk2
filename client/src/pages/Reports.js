@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { PageLayout } from "./../PageLayout";
-import { ReportsMenu } from "./ReportsMenu";
+import { PageLayout } from "./../PageLayout.js";
+import { ReportsMenu } from "./ReportsMenu.js";
 import Report from "./Report";
 
 export const Reports = () => (

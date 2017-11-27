@@ -1,5 +1,5 @@
 import React from "react";
-import { PageLayout } from "./../PageLayout";
+import { PageLayout } from "./../PageLayout.js";
 import selfie from "./../img/selfie.jpg";
 
 export const Home = () => (

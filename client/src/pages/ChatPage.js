@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Just, Nothing } from "folktale/maybe";
-import { PageLayout } from "../PageLayout";
-import { Chat } from "../components/Chat/Chat";
-import { ChatNick } from "../components/Chat/ChatNick";
+import { PageLayout } from "../PageLayout.js";
+import { Chat } from "../components/Chat/Chat.js";
+import { ChatNick } from "../components/Chat/ChatNick.js";
 
 export class ChatPage extends Component {
     constructor(props) {

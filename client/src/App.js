@@ -1,11 +1,11 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Home } from "./pages/Home";
-import { ChatPage } from "./pages/ChatPage";
-import { Reports } from "./pages/Reports";
-import { About } from "./pages/About";
-import { NotFound404 } from "./pages/NotFound404";
+import { Home } from "./pages/Home.js";
+import { ChatPage } from "./pages/ChatPage.js";
+import { Reports } from "./pages/Reports.js";
+import { About } from "./pages/About.js";
+import { NotFound404 } from "./pages/NotFound404.js";
 
 // window.React = React;
 

@@ -1,8 +1,8 @@
 import React from "react";
 import io from "socket.io-client";
 import "./css/chat.css";
-import { ChatMessages } from "./ChatMessages";
-import { ChatInput } from "./ChatInput";
+import { ChatMessages } from "./ChatMessages.js";
+import { ChatInput } from "./ChatInput.js";
 
 export class Chat extends React.Component {
     constructor(props) {
