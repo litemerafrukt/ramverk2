@@ -4,9 +4,11 @@
     "private": false,
     "scripts": {
         "start": "node ./bin/www",
+        "docker-start": "docker-compose up server",
         "start-client": "cd client && npm start",
         "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./bin/www",
-        "dev": "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
+        "dev":
+            "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
         "install-client": "cd client && npm install",
         "install-travis": "npm install && npm run install-client && npm run build-client",
         "build-client": "cd client && npm run build",
@@ -57,10 +59,7 @@
         "supertest": "^3.0.0"
     },
     "jest": {
-        "setupFiles": [
-            "<rootDir>/.fake-polyfills.js",
-            "<rootDir>/.test-setup.js"
-        ],
+        "setupFiles": ["<rootDir>/.fake-polyfills.js", "<rootDir>/.test-setup.js"],
         "modulePathIgnorePatterns": [
             "<rootDir>/coverage/",
             "<rootDir>/client/build",
@@ -71,8 +70,6 @@
         "moduleNameMapper": {
             "\\.(css|jpg|png|svg)$": "<rootDir>/client/src/__mocks__/empty-module.js"
         },
-        "collectCoverageFrom": [
-            "**/*.js"
-        ]
+        "collectCoverageFrom": ["**/*.js"]
     }
 }

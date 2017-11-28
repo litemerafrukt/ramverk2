@@ -11,6 +11,7 @@ services:
     ports:
         - "1338:1338"
     command: "npm test"
+
   node7:
     image: "node:7"
     user: "node"
@@ -22,6 +23,7 @@ services:
     ports:
         - "1337:1337"
     command: "npm test"
+
   node6:
     image: "node:6"
     user: "node"
@@ -34,3 +36,10 @@ services:
         - "1336:1336"
     command: "npm test"
 
+  server:
+    build:
+      context: .
+      dockerfile: .dockerfiles/node9
+    ports:
+      - "${DBWEBB_PORT:-3000}:3000"
+    command: "npm start"
