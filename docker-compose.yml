@@ -36,6 +36,15 @@ services:
         - "1336:1336"
     command: "npm test"
 
+  test:
+    build:
+      context: .
+      dockerfile: .dockerfiles/node9-test
+    environment:
+      - TERM=xterm-256color
+    tty: true
+    command: "npm run coverage"
+
   server:
     build:
       context: .
