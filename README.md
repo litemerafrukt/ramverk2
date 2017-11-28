@@ -8,7 +8,28 @@
 
 [Demo](https://whispering-falls-30453.herokuapp.com/)
 
-## Installera
+### Användning
+
+### Docker (rekomenderas)
+
+Meningen är att du bara ska behöva klona repot och köra `npm run docker-start`
+för att få igång sidan på port 3000 eller en port angiven i DBWEBB_PORT.
+(servern säger alltid att den lyssnar på port 3000 eftersom den gör det i
+docker-containern)
+
+1. Klona: repot
+2. cd in
+
+Dra igång servern:
+
+3. `npm run docker-start`
+4. Servern lyssnar på port angiven i `DBWEBB_PORT` eller `3000`.
+
+Kör tester:
+
+3. `npm run docker-test`
+
+### Installera och kör utan docker
 
 1. Klona repot
 2. cd in
@@ -22,7 +43,7 @@
 10. Servern lyssnar på port angiven i `DBWEBB_PORT`, `PORT`, `LOCAL_DEV_PORT`
     eller `3000` i den ordningen.
 
-## Kör tester
+### Kör tester utan docker
 
 Efter `npm install` kör `npm test` för att köra tester och linters för server
 och client. Vill du köra tester i node 8, 7 eller 6 kan du använda docker med
