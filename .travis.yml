@@ -11,8 +11,7 @@ git:
     submodules: false
 
 before_script:
-    - npm install
-    - npm run install-client
+    - npm run install-travis
 
 script:
     - npm test
