@@ -49,6 +49,8 @@ services:
     build:
       context: .
       dockerfile: .dockerfiles/node9
+    environment:
+      - DBWEBB_PORT=${DBWEBB_PORT:-3000}
     ports:
-      - "${DBWEBB_PORT:-3000}:3000"
+      - "${DBWEBB_PORT:-3000}:${DBWEBB_PORT:-3000}"
     command: "npm start"

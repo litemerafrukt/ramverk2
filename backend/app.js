@@ -11,10 +11,9 @@ const app = express();
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")));
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "/../client/build")));
 
 // routing
 app.use("/api/test", test);
@@ -22,7 +21,7 @@ app.use("/api/reports", reports);
 
 // Catch all, send react app via index.html if no previous match
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "/client/build/index.html"));
+    res.sendFile(path.join(__dirname + "/../client/build/index.html"));
 });
 
 // catch 404 and forward to error handler

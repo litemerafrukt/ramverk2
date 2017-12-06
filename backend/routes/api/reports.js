@@ -1,9 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
+const path = require("path");
+
 const Future = require("fluture");
 
-const reportsDir = "reports";
+const reportsDir = path.join(__dirname, "../../reports");
 
 const getReport = filename =>
     Future.node(onComplete => {

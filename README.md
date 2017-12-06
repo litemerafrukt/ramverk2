@@ -14,8 +14,6 @@
 
 Meningen är att du bara ska behöva klona repot och köra `npm run docker-start`
 för att få igång sidan på port 3000 eller en port angiven i DBWEBB_PORT.
-(servern säger alltid att den lyssnar på port 3000 eftersom den gör det i
-docker-containern)
 
 1. Klona: repot
 2. cd in
