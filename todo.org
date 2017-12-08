@@ -1,0 +1,11 @@
+# TITLE Refactor
+* [DONE] remove unused features from app.js
+  CLOSED: [2017-12-07T14:39:49--1:00]
+* [DONE] remove unused features from index.js
+  CLOSED: [2017-12-07T14:39:53--1:00]
+* [DONE] shorten index.js
+  CLOSED: [2017-12-07T14:39:55--1:00]
+* [DONE] test for report route?
+  CLOSED: [2017-12-07T14:39:58--1:00]
+* [DONE] refactor fluture -> promise
+  CLOSED: [2017-12-07T14:40:00--1:00]

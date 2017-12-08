@@ -1,14 +1,13 @@
 const express = require("express");
 const path = require("path");
-const logger = require("morgan");
 const bodyParser = require("body-parser");
 
 const test = require("./routes/api/test-route");
 const reports = require("./routes/api/reports");
+const xmas = require("./routes/api/xmas");
 
 const app = express();
 
-app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -18,6 +17,7 @@ app.use(express.static(path.join(__dirname, "/../client/build")));
 // routing
 app.use("/api/test", test);
 app.use("/api/reports", reports);
+app.use("/api/xmas", xmas);
 
 // Catch all, send react app via index.html if no previous match
 app.get("/", (req, res) => {
@@ -38,10 +38,8 @@ app.use(function(err, req, res) {
     res.locals.message = err.message;
     res.locals.error = req.app.get("env") === "development" ? err : {};
 
-    // render the error page
+    // render the error
     res.status(err.status || 500);
-    // res.render("error");
-    //res.sendFile(path.join(__dirname + "/client/build/index.html"));
     res.json({ err: err });
 });
 

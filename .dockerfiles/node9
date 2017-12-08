@@ -11,5 +11,3 @@ RUN chown -R node:node /home/node/app
 
 USER node
 RUN npm run install-travis
-
-EXPOSE 3000

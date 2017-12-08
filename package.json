@@ -4,10 +4,10 @@
     "private": false,
     "scripts": {
         "start": "node ./index.js",
-        "docker-start": "docker-compose up server && exit 0",
+        "docker-start": "docker-compose up mongodb server && exit 0",
         "docker-test": "docker-compose up test && exit 0",
         "start-client": "cd client && npm start",
-        "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./bin/www",
+        "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./index.js",
         "dev":
             "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
         "install-client": "cd client && npm install",
@@ -32,12 +32,12 @@
         "body-parser": "~1.18.2",
         "debug": "~2.6.9",
         "express": "~4.15.5",
-        "fluture": "^7.2.1",
         "folktale": "^2.0.1",
         "morgan": "~1.9.0",
         "most": "^1.7.2",
         "ramda": "^0.25.0",
-        "socket.io": "^2.0.4"
+        "socket.io": "^2.0.4",
+        "mongodb": "^2.2.33"
     },
     "devDependencies": {
         "babel-eslint": "^8.0.2",

@@ -38,6 +38,26 @@ test("/api/reports/kmom01 should respond with 200", done => {
         .expect(200, done);
 });
 
+test("/api/reports/kmom01 should respond with body containing 'kmom01'", done => {
+    return request(app)
+        .get("/api/reports/kmom01")
+        .then(res => expect(res.body).toContain("kmom01"))
+        .then(done);
+});
+
+test("/api/reports/whatever should respond with 404", done => {
+    return request(app)
+        .get("/api/reports/whatever")
+        .expect(404, done);
+});
+
+test("/api/reports/whatever should respond err in json", done => {
+    return request(app)
+        .get("/api/reports/whatever")
+        .then(res => expect(res.body).toHaveProperty("err"))
+        .then(done);
+});
+
 test("/api/reports/whatever should respond with 404", done => {
     return request(app)
         .get("/api/reports/whatever")

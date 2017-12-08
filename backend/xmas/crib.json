@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Åsna",
+        "description": "Riddjur",
+        "picture": "donkey.jpg"
+    },
+    {
+        "name": "Maria",
+        "description": "Jungfru",
+        "picture": "virginmary.jpg"
+    },
+    {
+        "name": "Josef",
+        "description": "Plastpappa",
+        "picture": "joseph.jpg"
+    },
+    {
+        "name": "Jesus",
+        "description": "Frälsare",
+        "picture": "babyjesus.jpg"
+    }
+]
