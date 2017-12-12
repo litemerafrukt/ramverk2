@@ -26,6 +26,11 @@ p {
     margin-bottom: 1.5rem;
 }
 
+/* Quickfix */
+button {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
 .page-wrap {
     display: flex;
     margin-top: 7rem;

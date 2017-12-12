@@ -21,6 +21,9 @@ export const SidebarMenu = () => (
                         <NavLink to="/chat" activeClassName="nav-selected">
                             Chat
                         </NavLink>
+                        <NavLink to="/crib" activeClassName="nav-selected">
+                            Julkrubba
+                        </NavLink>
                         <NavLink to="/reports" activeClassName="nav-selected">
                             Rapporter
                         </NavLink>

@@ -1,49 +1,49 @@
 version: "3"
 services:
-  node8:
-    image: "node:8"
-    user: "node"
-    working_dir: /home/node/app
-    environment:
-      - PORT=1338
-    volumes:
-      - ./:/home/node/app
-    ports:
-        - "1338:1338"
-    command: "npm test"
+  # node8:
+  #   image: "node:8"
+  #   user: "node"
+  #   working_dir: /home/node/app
+  #   environment:
+  #     - PORT=1338
+  #   volumes:
+  #     - ./:/home/node/app
+  #   ports:
+  #       - "1338:1338"
+  #   command: "npm test"
 
-  node7:
-    image: "node:7"
-    user: "node"
-    working_dir: /home/node/app
-    environment:
-      - PORT=1337
-    volumes:
-      - ./:/home/node/app
-    ports:
-        - "1337:1337"
-    command: "npm test"
+  # node7:
+  #   image: "node:7"
+  #   user: "node"
+  #   working_dir: /home/node/app
+  #   environment:
+  #     - PORT=1337
+  #   volumes:
+  #     - ./:/home/node/app
+  #   ports:
+  #       - "1337:1337"
+  #   command: "npm test"
 
-  node6:
-    image: "node:6"
-    user: "node"
-    working_dir: /home/node/app
-    environment:
-      - PORT=1336
-    volumes:
-      - ./:/home/node/app
-    ports:
-        - "1336:1336"
-    command: "npm test"
+  # node6:
+  #   image: "node:6"
+  #   user: "node"
+  #   working_dir: /home/node/app
+  #   environment:
+  #     - PORT=1336
+  #   volumes:
+  #     - ./:/home/node/app
+  #   ports:
+  #       - "1336:1336"
+  #   command: "npm test"
 
-  test:
-    build:
-      context: .
-      dockerfile: .dockerfiles/node9-test
-    environment:
-      - TERM=xterm-256color
-    tty: true
-    command: "npm run coverage"
+  # test:
+  #   build:
+  #     context: .
+  #     dockerfile: .dockerfiles/node9-test
+  #   environment:
+  #     - TERM=xterm-256color
+  #   tty: true
+  #   command: "npm run coverage"
 
   mongodb:
     image: mongo:3.4
