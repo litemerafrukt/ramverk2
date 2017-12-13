@@ -10,7 +10,8 @@
         "docker-test": "docker-compose up test && exit 0",
         "start-client": "cd client && npm start",
         "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./index.js",
-        "dev": "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
+        "dev":
+            "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
         "install-client": "cd client && npm install",
         "install-travis": "npm install && npm run install-client && npm run build-client",
         "build-client": "cd client && npm run build",
@@ -20,6 +21,9 @@
         "coverage": "jest --coverage ; exit 0",
         "test-client": "cd client && CI=true npm test",
         "test": "jest",
+        "test1": "docker-compose run nodeLatest",
+        "test2": "docker-compose run node9",
+        "test3": "docker-compose run node8",
         "jest-watch": "jest --watch ; exit 0",
         "stylelint": "stylelint **/*.css; exit 0",
         "eslint": "eslint .; exit 0",
@@ -59,10 +63,7 @@
         "supertest": "^3.0.0"
     },
     "jest": {
-        "setupFiles": [
-            "<rootDir>/.fake-polyfills.js",
-            "<rootDir>/.test-setup.js"
-        ],
+        "setupFiles": ["<rootDir>/.fake-polyfills.js", "<rootDir>/.test-setup.js"],
         "modulePathIgnorePatterns": [
             "<rootDir>/coverage/",
             "<rootDir>/client/build",
@@ -73,8 +74,6 @@
         "moduleNameMapper": {
             "\\.(css|jpg|png|svg)$": "<rootDir>/client/src/__mocks__/empty-module.js"
         },
-        "collectCoverageFrom": [
-            "**/*.js"
-        ]
+        "collectCoverageFrom": ["**/*.js"]
     }
 }
