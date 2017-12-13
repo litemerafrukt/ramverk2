@@ -18,14 +18,19 @@ för att få igång sidan på port 3000 eller en port angiven i DBWEBB_PORT.
 1. Klona: repot
 2. cd in
 
+Bygg:
+
+3. `npm run docker-build`
+
 Dra igång servern:
 
-3. `npm run docker-start`
-4. Servern lyssnar på port angiven i `DBWEBB_PORT` eller `3000`.
+4. `npm run docker-start`
+5. Servern lyssnar på port angiven i `DBWEBB_PORT` eller `3000`.
 
 Kör tester:
 
-3. `npm run docker-test`
+4. `npm rum docker-build-test`
+5. `npm run docker-test`
 
 ### Installera och kör utan docker
 
