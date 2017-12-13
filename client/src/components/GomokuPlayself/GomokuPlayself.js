@@ -55,7 +55,7 @@ export class GomokuPlayself extends Component {
             this.setState(({ boardSize }) => initialState(boardSize));
         }
 
-        const interval = setInterval(this.tickGame, 500);
+        const interval = setInterval(this.tickGame, 300);
 
         this.setState(() => ({ runningInterval: interval }));
     }
