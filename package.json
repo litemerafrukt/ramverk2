@@ -1,6 +1,6 @@
 {
     "name": "redovisa",
-    "version": "4.0.3",
+    "version": "5.0.0",
     "private": false,
     "scripts": {
         "start": "node ./index.js",
@@ -10,8 +10,7 @@
         "docker-test": "docker-compose up test && exit 0",
         "start-client": "cd client && npm start",
         "start-backend-dev": "LOCAL_DEV_PORT=7000 nodemon ./index.js",
-        "dev":
-            "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
+        "dev": "concurrently --kill-others --raw \"npm run start-backend-dev\" \"npm run start-client\"",
         "install-client": "cd client && npm install",
         "install-travis": "npm install && npm run install-client && npm run build-client",
         "build-client": "cd client && npm run build",
@@ -60,7 +59,10 @@
         "supertest": "^3.0.0"
     },
     "jest": {
-        "setupFiles": ["<rootDir>/.fake-polyfills.js", "<rootDir>/.test-setup.js"],
+        "setupFiles": [
+            "<rootDir>/.fake-polyfills.js",
+            "<rootDir>/.test-setup.js"
+        ],
         "modulePathIgnorePatterns": [
             "<rootDir>/coverage/",
             "<rootDir>/client/build",
@@ -71,6 +73,8 @@
         "moduleNameMapper": {
             "\\.(css|jpg|png|svg)$": "<rootDir>/client/src/__mocks__/empty-module.js"
         },
-        "collectCoverageFrom": ["**/*.js"]
+        "collectCoverageFrom": [
+            "**/*.js"
+        ]
     }
 }
