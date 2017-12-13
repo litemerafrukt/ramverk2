@@ -9,3 +9,10 @@
   CLOSED: [2017-12-07T14:39:58--1:00]
 * [DONE] refactor fluture -> promise
   CLOSED: [2017-12-07T14:40:00--1:00]
+
+# Related to gomoku ai & game
+* TODO AI should return maybe.
+* TODO checkWinner should return maybe.
+* TODO refactor checkWinner.
+* TODO Look at GomokuPlayself for improvments in API. Should support compose & pipe.
+* TODO Refaktor to game, type, class, funktions, or whatever.
