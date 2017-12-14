@@ -6,6 +6,7 @@
         "start": "node ./index.js",
         "docker-build": "docker-compose build server mongodb",
         "docker-start": "docker-compose up mongodb server && exit 0",
+        "docker-production": "docker-compose up -d mongodb server",
         "docker-build-test": "docker-compose build test",
         "docker-test": "docker-compose up test && exit 0",
         "start-client": "cd client && npm start",
