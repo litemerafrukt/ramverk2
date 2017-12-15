@@ -8,6 +8,25 @@
 
 [Demo](https://whispering-falls-30453.herokuapp.com/)
 
+Detta är min me-sida för kursen [ramverk2](https://dbwebb.se/kurser/ramverk2) på [dbwebb](https://dbwebb.se)
+
+### Tekniker
+
+I me-sidan testar jag många tekniker och javascript-bibliotek vilket är skälet till att installation och byggande tar en ganska lång stund.
+
+De viktigaste tekniker som jag valt att är:
+
+* Express
+* React
+* React-Router
+* Jest
+* Supertest
+* MongoDB
+* Socket.io
+* Ramda
+
+Men det finns fler dependencies, se package.json för en komplett lista.
+
 ### Användning
 
 ### Docker (rekomenderas)
@@ -25,7 +44,8 @@ Bygg:
 Dra igång servern:
 
 4. `npm run docker-start`
-5. Servern lyssnar på port angiven i `DBWEBB_PORT` eller `3000`.
+5. Servern lyssnar på port `3000`. (För att ändra port behöver du ändra i `docker-compose.yml` under `server` -> `ports`.)
+6. Öppna webläsaren mot `localhost:3000`.
 
 Kör tester:
 

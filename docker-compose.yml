@@ -59,10 +59,9 @@ services:
       context: .
       dockerfile: .dockerfiles/node9
     environment:
-      - DBWEBB_PORT=${DBWEBB_PORT:-3000}
       - DSN=mongodb://mongodb:27017/
     links:
       - mongodb
     ports:
-      - "${DBWEBB_PORT:-3000}:${DBWEBB_PORT:-3000}"
+      - 3000:3000
     command: "npm start"
