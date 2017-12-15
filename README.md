@@ -6,7 +6,7 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/badges/build.png?b=master)](https://scrutinizer-ci.com/g/litemerafrukt/ramverk2/build-status/master)
 
-[Demo](https://whispering-falls-30453.herokuapp.com/)
+[Demo](http://178.62.242.169)
 
 Detta är min me-sida för kursen [ramverk2](https://dbwebb.se/kurser/ramverk2) på [dbwebb](https://dbwebb.se)
 
